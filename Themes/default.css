@@ -1,0 +1,172 @@
+html, body {
+	font-family: 'Comfortaa'; 
+	font-size: 100%;
+	color: #333;
+	height: 100%;
+	width: 100%;
+}
+
+.red, 
+.error {
+	color: #f00;
+}
+
+.yellow {
+	color: #ff0;
+}
+
+.grey {
+	color: #777;
+}
+
+.hidden {
+	display: none;
+}
+
+#background {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: #ссс;
+	z-index: -10;
+}
+
+.header {
+	height: 56px;
+}
+
+.header .logo {
+	position: absolute;
+	top: 20px; 
+	left: 20px;
+	background: url('img/logo.png') 0 0 no-repeat;
+	background-size: contain;
+	width: 225px;
+	height: 100px;
+}
+
+.logo a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0px; 
+	right: 0px;
+	width: 100%;
+	z-index: 10;
+	text-align: right;
+	padding: 20px;	
+}
+
+.footer a {
+	text-decoration: none;
+	text-shadow: 1px 1px 1px #000;
+	outline: 0;
+	font-size: 0.8em;
+	color: grey;
+}
+.footer a:hover,
+.footer a:active {
+	color: #ff0;
+}
+
+.loader {
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.75);
+	z-index: 1000;
+}
+.loader::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	max-width: 64px;
+	max-height: 64px;
+	background: url('img/loading.gif') 50% 50% no-repeat;
+	background-size: contain; 
+}
+
+.content { 
+	padding-top: 20px;
+}
+
+/* -------------main screen-------------- */
+.main-content {
+	position: relative;
+}
+
+.tasks-list table {
+	width: 100%;
+}
+.task:hover {
+	background: #ddd;
+}
+.task td {
+	vertical-align: top;
+	padding: 15px;
+}
+.task .task-text {
+	padding: 15px 0px;
+}
+.task .task-img {
+	width: 320px;
+}
+.task .task-img img {
+	display: block;
+	vertical-align: middle;
+	height: 240px;
+	max-width: 320px;
+}
+.task .task-status {
+	border-top: 1px solid #999;
+	padding-top: 15px;
+}
+.task .task-status .status-icon-completed,
+.task .task-status .status-icon-pending {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: contain; 
+	vertical-align: middle;
+}
+.task .task-status .status-icon-completed {
+	background: url('img/status_completed.png') 50% 50% no-repeat;
+}
+.task .task-status .status-icon-pending {
+	background: url('img/status_pending.png') 50% 50% no-repeat;
+}
+
+.tasks-paging {
+	margin: 15px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.task-preview {
+	visibility: hidden;
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+	overflow-y: auto;
+}
+.task-preview table {
+	width: 100%;
+}
+/* -------------------------------------- */
